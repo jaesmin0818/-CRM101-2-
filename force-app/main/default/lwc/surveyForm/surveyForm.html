@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="설문 참여" icon-name="custom:custom63">
+        <form onsubmit={handleSubmit}>
+            <lightning-radio-group 
+                label="현재 귀하의 사업장에서 주류 판매 여부는 어떻게 됩니까?" 
+                name="question1" 
+                options={판매여부Options} 
+                onchange={handleInputChange}
+                required>
+            </lightning-radio-group>
+  
+            <lightning-radio-group 
+                label="귀하의 사업장에서 가장 많이 판매하는 주류 카테고리는 무엇입니까?" 
+                name="question2"  
+                options={주류카테고리Options} 
+                onchange={handleInputChange}
+                required>
+            </lightning-radio-group>
+  
+            <lightning-radio-group 
+                label="현재 주류 공급업체와의 거래에 만족하십니까?" 
+                name="question3" 
+                options={공급업체만족도Options} 
+                onchange={handleInputChange}
+                required>
+            </lightning-radio-group>
+  
+            <lightning-radio-group 
+                label="주류 공급업체를 변경하거나 추가 공급업체를 도입할 의향이 있습니까?" 
+                name="question4" 
+                options={공급업체변경의향Options} 
+                onchange={handleInputChange}
+                required>
+            </lightning-radio-group>
+  
+            <lightning-radio-group 
+                label="신제품 도입 시 어떤 요소를 가장 중요하게 고려하십니까?" 
+                name="question5"  
+                options={신제품도입요소Options} 
+                onchange={handleInputChange}
+                required>
+            </lightning-radio-group>
+  
+            <lightning-button type="submit" label="제출"></lightning-button>
+        </form>
+    </lightning-card>
+</template>
